@@ -172,7 +172,7 @@ class GuestbookController {
 
 			guestbook.delete(it);
 
-			model.addAttribute("entries", guestbook.findAll());
+			// model.addAttribute("entries", guestbook.findAll());
 
 			return FragmentsRendering.with("guestbook :: entries").build();
 

@@ -1,0 +1,69 @@
+package videoshop.catalog;
+
+//import 
+
+public class SearchCatalog {
+
+    private final VideoCatalog catalog;
+
+    public SearchCatalog(VideoCatalog catalog) {
+        this.catalog = catalog;
+    }
+
+    @GetMapping("/search")
+    String search(@RequestParam("q") String q,
+                  Model model,
+                  @RequestHeader(value = "HX-Request", required = false) String htmx) {
+
+        Specification<Disc> byName = (root, query, cb) ->
+                cb.like(cb.lower(root.get("name")), "%" + q.toLowerCase() + "%");
+        Specification<Disc> byGenre = (root, query, cb) ->
+                cb.like(cb.lower(root.get("genre")), "%" + q.toLowerCase() + "%");
+
+        var results = catalog.findAll(Specification.where(byName).or(byGenre));
+
+        model.addAttribute("catalog", results);
+        model.addAttribute("title", "Search");
+        model.addAttribute("query", q);
+
+        return (htmx != null) ? "catalog :: #catalogList" : "catalog";
+    }
+
+    @GetMapping("/filter")
+    String filter(@RequestParam(required = false) String type,
+                  @RequestParam(required = false) Double minPrice,
+                  @RequestParam(required = false) Double maxPrice,
+                  @RequestParam(required = false) String genre,
+                  Model model,
+                  @RequestHeader(value = "HX-Request", required = false) String htmx) {
+
+        Specification<Disc> spec = Specification.where((root, query, cb) -> cb.conjunction());
+
+        if (type != null && !type.isBlank()) {
+            var t = Disc.DiscType.valueOf(type.toUpperCase());
+            spec = spec.and((root, query, cb) -> cb.equal(root.get("type"), t));
+            model.addAttribute("selectedType", type);
+        }
+
+        if (minPrice != null || maxPrice != null) {
+            double low  = (minPrice == null) ? 0d : minPrice;
+            double high = (maxPrice == null) ? Double.MAX_VALUE : maxPrice;
+            spec = spec.and((root, query, cb) -> cb.between(root.get("price"), low, high));
+        }
+
+        if (genre != null && !genre.isBlank()) {
+            var like = "%" + genre.toLowerCase() + "%";
+            spec = spec.and((root, query, cb) -> cb.like(cb.lower(root.get("genre")), like));
+            model.addAttribute("genre", genre);
+        }
+
+        var results = catalog.findAll(spec);
+
+        model.addAttribute("catalog", results);
+        model.addAttribute("title", "Filter");
+        model.addAttribute("minPrice", minPrice);
+        model.addAttribute("maxPrice", maxPrice);
+
+        return (htmx != null) ? "catalog :: #catalogList" : "catalog";
+    }
+}

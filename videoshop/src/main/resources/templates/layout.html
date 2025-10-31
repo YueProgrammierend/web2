@@ -8,19 +8,14 @@
 
         <script th:src="@{/webjars/jquery/jquery.min.js}"
                 src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
         <script th:src="@{/webjars/Semantic-UI/semantic.min.js}"
                 src="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
-
-        <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>   <!-- new -->
-
         <link th:href="@{/webjars/Semantic-UI/semantic.min.css}" rel="stylesheet"
               href="http://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css" type="text/css"/>
         <link th:href="@{/resources/css/style.css}" rel="stylesheet"
               href="../static/resources/css/style.css" type="text/css"/>
 
         <title th:text="${#strings.isEmpty(title)} ? #{home.title} : ${title}">Videoshop</title>
-        
     </head>
     <body>
         <div class="ui container">
@@ -28,49 +23,7 @@
                 <h1 th:text="${#strings.isEmpty(title)} ? #{home.title} : ${title}">Videoshop</h1>
             </header>
             <nav th:include="navigation :: navigation"></nav>
-            <section>
-                <!-- side search -->
-                    <form action="/filter" method="get"
-                        hx-get="/filter"
-                        hx-target="#catalogList"
-                        hx-push-url="true">
-            <h4>Preis</h4>
-            <div class="price-inputs">
-                <input type="number" name="minPrice" min="0" step="1"
-                    placeholder="min"
-                    th:value="${minPrice}">
-                <span> — </span>
-                <input type="number" name="maxPrice" min="0" step="1"
-                    placeholder="max"
-                    th:value="${maxPrice}">
-            </div>
-
-            <h4>Typ</h4>
-            <div name="type" class="genre-checkbox-group">
-                <label><input type="checkbox" name="type" value="Animation" th:checked="${type != null and type.contains('Animation')}"> Animation</label><br>
-                <label><input type="checkbox" name="type" value="Action" th:checked="${type != null and type.contains('Action')}"> Action</label><br>
-                <label><input type="checkbox" name="type" value="Adventure" th:checked="${type != null and type.contains('Adventure')}"> Adventure</label><br>
-                <label><input type="checkbox" name="type" value="Comedy" th:checked="${type != null and type.contains('Comedy')}"> Comedy</label><br>
-                <label><input type="checkbox" name="type" value="Drama" th:checked="${type != null and type.contains('Drama')}"> Drama</label><br>
-                <label><input type="checkbox" name="type" value="Horror" th:checked="${type != null and type.contains('Horror')}"> Horror</label><br>
-                <label><input type="checkbox" name="type" value="Sci-Fi" th:checked="${type != null and type.contains('Sci-Fi')}"> Sci-Fi</label><br>
-                <label><input type="checkbox" name="type" value="Biography" th:checked="${type != null and type.contains('Biography')}"> Biography</label><br>
-                <label><input type="checkbox" name="type" value="War" th:checked="${type != null and type.contains('War')}"> War</label>
-            </div>
-
-            <h4>Name</h4>
-            <input type="text" name="name" placeholder="z.B. Last Action Hero"
-                    th:value="${name}">
-            
-            <br><br>
-            <button type="submit">Anwenden</button>
-            </form>
-
-
-                <div class="twelve wide column">
-                    <section layout:fragment="content"></section>
-                </div>
-            </section>
+            <section layout:fragment="content"></section>
         </div>
     </body>
 </html>

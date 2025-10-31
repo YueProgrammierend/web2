@@ -8,3 +8,4 @@ target/
 .idea/
 *.iml
 *.mdzip.bak
+.DS_Store

@@ -18,13 +18,13 @@ package videoshop.catalog;
 import videoshop.catalog.Disc.DiscType;
 
 import java.time.LocalDateTime;
+import java.util.List; //neu
+import java.util.ArrayList;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+
 import org.hibernate.validator.constraints.Range;
-
-import org.springframework.data.jpa.domain.Specification;    //new
-
 import org.salespointframework.inventory.InventoryItem;
 import org.salespointframework.inventory.UniqueInventory;
 import org.salespointframework.inventory.UniqueInventoryItem;
@@ -36,10 +36,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import org.springframework.web.bind.annotation.RequestParam;  // new
-import org.springframework.web.bind.annotation.RequestHeader; // new
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 class CatalogController {
@@ -76,6 +73,74 @@ class CatalogController {
 		return "catalog";
 	}
 
+	//neu
+	@GetMapping("/filter")
+	String filterCatalog(
+			@RequestParam(required = false) String name,
+			@RequestParam(required = false) List<String> type,
+			@RequestParam(required = false) Integer minPrice,
+			@RequestParam(required = false) Integer maxPrice,
+			Model model
+	) {
+
+		// 1. DVD + BLURAY
+		Iterable<Disc> allDiscs = catalog.findAll();
+
+		// 2. Filterung durchführen
+		List<Disc> filtered = new ArrayList<>();
+
+		for (Disc d : allDiscs) {
+
+			// a) Name
+			if (name != null && !name.isBlank()) {
+				String lowerName = name.toLowerCase();
+				if (!d.getName().toLowerCase().contains(lowerName)) {
+					continue;
+				}
+			}
+
+			// b) Genre 
+			if (type != null && !type.isEmpty()) {
+				boolean matchAny = false;
+				for (String t : type) {
+					if (d.getGenre() != null && d.getGenre().contains(t)) {
+						matchAny = true;
+						break;
+					}
+				}
+				if (!matchAny) {
+					continue;
+				}
+			}
+
+			// c)Preisbereich
+			double priceValue = d.getPrice().getNumber().doubleValue(); 
+			if (minPrice != null) {
+				if (priceValue < minPrice) {
+					continue;
+				}
+			}
+			if (maxPrice != null) {
+				if (priceValue > maxPrice) {
+					continue;
+				}
+			}
+			filtered.add(d);
+		}
+
+		// 3. Gefilterte Ergebnisse an `catalog.html`
+		model.addAttribute("catalog", filtered);
+
+		model.addAttribute("title", "catalog.search.title");
+		model.addAttribute("name", name);
+		model.addAttribute("type", type);
+		model.addAttribute("minPrice", minPrice);
+		model.addAttribute("maxPrice", maxPrice);
+
+		return "catalog";
+	}
+
+
 	// (｡◕‿◕｡)
 	// Befindet sich die angesurfte Url in der Form /foo/5 statt /foo?bar=5 so muss man @PathVariable benutzen
 	// Lektüre: http://spring.io/blog/2009/03/08/rest-in-spring-3-mvc/
@@ -92,64 +157,6 @@ class CatalogController {
 
 		return "detail";
 	}
-
-    @GetMapping("/search")
-    String search(@RequestParam("q") String q,
-                  Model model,
-                  @RequestHeader(value = "HX-Request", required = false) String htmx) {
-
-        Specification<Disc> byName = (root, query, cb) ->
-                cb.like(cb.lower(root.get("name")), "%" + q.toLowerCase() + "%");
-        Specification<Disc> byGenre = (root, query, cb) ->
-                cb.like(cb.lower(root.get("genre")), "%" + q.toLowerCase() + "%");
-
-        var results = catalog.findAll(Specification.where(byName).or(byGenre));
-
-        model.addAttribute("catalog", results);
-        model.addAttribute("title", "Search");
-        model.addAttribute("query", q);
-
-        return (htmx != null) ? "catalog :: #catalogList" : "catalog";
-    }
-
-	@GetMapping("/filter")
-	String filter(@RequestParam(required = false) String type,
-				@RequestParam(required = false) Double minPrice,
-				@RequestParam(required = false) Double maxPrice,
-				@RequestParam(required = false) String genre,
-				Model model,
-				@RequestHeader(value = "HX-Request", required = false) String htmx) {
-
-		Specification<Disc> spec = Specification.where((root, query, cb) -> cb.conjunction());
-
-		if (type != null && !type.isBlank()) {
-			var t = Disc.DiscType.valueOf(type.toUpperCase());
-			spec = spec.and((root, query, cb) -> cb.equal(root.get("type"), t));
-			model.addAttribute("selectedType", type);
-		}
-
-		if (minPrice != null || maxPrice != null) {
-			Double low  = (minPrice == null) ? 0.0 : minPrice;
-			Double high = (maxPrice == null) ? Double.MAX_VALUE : maxPrice;
-			spec = spec.and((root, query, cb) -> cb.between(root.get("price"), low, high));
-			model.addAttribute("minPrice", minPrice);
-			model.addAttribute("maxPrice", maxPrice);
-		}
-
-		if (genre != null && !genre.isBlank()) {
-			var like = "%" + genre.toLowerCase() + "%";
-			spec = spec.and((root, query, cb) -> cb.like(cb.lower(root.get("genre")), like));
-			model.addAttribute("genre", genre);
-		}
-
-		var results = catalog.findAll(spec);
-		model.addAttribute("catalog", results);
-		model.addAttribute("title", "Filter");
-
-		return (htmx != null) ? "catalog :: #catalogList" : "catalog";
-	}
-
-	
 
 	@PostMapping("/disc/{disc}/comments")
 	public String comment(@PathVariable Disc disc, @Valid CommentAndRating form, Errors errors) {

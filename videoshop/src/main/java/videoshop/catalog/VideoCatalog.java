@@ -21,16 +21,12 @@ import org.salespointframework.catalog.Catalog;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.util.Streamable;
 
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;  //new
-
 /**
  * An extension of {@link Catalog} to add video shop specific query methods.
  *
  * @author Oliver Gierke
  */
-
-
-public interface VideoCatalog extends Catalog<Disc>, JpaSpecificationExecutor<Disc>  {  //new:JpaSpecificationExecutor<Disc>
+public interface VideoCatalog extends Catalog<Disc> {
 
 	static final Sort DEFAULT_SORT = Sort.by("productIdentifier").descending();
 
@@ -51,6 +47,5 @@ public interface VideoCatalog extends Catalog<Disc>, JpaSpecificationExecutor<Di
 	 */
 	default Streamable<Disc> findByType(DiscType type) {
 		return findByType(type, DEFAULT_SORT);
-
 	}
 }

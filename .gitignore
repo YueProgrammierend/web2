@@ -9,3 +9,5 @@ target/
 *.iml
 *.mdzip.bak
 .DS_Store
+
+videoshop/.igt

@@ -8,12 +8,15 @@ target/
 # /.gitignore
 # /.github
 # 这个提交不了子文件
+<<<<<<< HEAD
 swt25w21/
 swt25w21-yue-login/
 swt25w21-dokumentation/
 videoshop/
 
 
+=======
+>>>>>>> 7efb5a02c020f26cd806158f50d313e0430abd14
 
 # VS Code
 .vscode/

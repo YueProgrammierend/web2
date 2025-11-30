@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title>Festival bearbeiten</title>
+</head>
+
+<body>
+<nav th:insert="~{navigation :: navigation}"></nav>
+
+<main layout:fragment="content">
+    <h2>Festival bearbeiten</h2>
+
+    <form th:action="@{/festival/edit/error/{uuid}(uuid=${festival.id.id})}"
+          th:object="${festivalForm}" method="post">
+        <table>
+            <thead style="border-collapse: collapse;">
+            <tr>
+                <th style="padding-right: 32px;">Name</th>
+                <th style="padding-right: 32px;">Beginndaten</th>
+                <th style="padding-right: 32px;">Enddaten</th>
+                <th style="padding-right: 32px;">Location</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <!--Festival Name-->
+                <td style="padding-right: 16px;" >
+                    <div th:text="${festival.name}"></div>
+                    <label>Name</label>
+                    <input type="text" th:field="*{name}"/>
+                    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                </td>
+
+                <!--Datum-->
+                <td style="padding-right: 16px;" >
+                    <div th:text="${#temporals.format(festival.startDate, 'dd.MM.yyyy HH:mm')}"></div>
+                    <label for="startDate">Startdatum:</label>
+                    <input type="datetime-local" id="startDate" th:field="*{startDate}" />
+                    <div th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></div>
+                </td>
+
+                <td style="padding-right: 16px;" >
+                    <div th:text="${#temporals.format(festival.endDate, 'dd.MM.yyyy HH:mm')}"></div>
+                    <label for="endDate">Enddatum:</label>
+                    <input type="datetime-local" id="endDate" th:field="*{endDate}" />
+                    <div th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></div>
+                </td>
+
+                <!--Location Name-->
+                <td style="padding-right: 16px;" >
+                    <div th:text="${festival.location.name}"></div>
+                    <select th:field="*{locationId}">
+                        <option th:each="loc : ${locations}"
+                                th:value="${loc.id.id}"
+                                th:selected="${loc.id.id == festival.location.id.id}"
+                                th:text="${loc.name}">
+                        </option>
+                    </select>
+                    <div th:if="${#fields.hasErrors('locationId')}" th:errors="*{locationId}"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">Speichern</button>
+    </form>
+
+    <br>
+    <form th:action="@{/festival/delete/{id}(id=${festival.id.id})}"
+          method="post">
+        <button type="submit">Löschen</button>
+    </form>
+
+    <br>
+    <a th:href="@{/festival}">
+        <button type="button">Zurück zur Übersicht</button>
+    </a>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="#{angemeldet}">angemeldet</title>
+</head>
+
+<body>
+<section layout:fragment="content">
+    <!-- Authen -->
+    <div sec:authorize="isAuthenticated()">
+        <br/>
+        <br/>
+        <H3>
+            Ich (<span sec:authentication="name"></span>)
+        </H3>
+
+        <div sec:authorize="hasAnyRole('Veranstalter', 'Manager', 'Festivalleiter')">
+            Meine Info：
+
+            <div sec:authorize="hasRole('Veranstalter')">
+                <strong>Veranstalter</strong>
+            </div>
+
+            <div sec:authorize="hasRole('Manager')">
+                <h1>Manager</h1>
+            </div>
+
+            <div sec:authorize="hasRole('Festivalleiter')">
+                <strong>Festivalleiter</strong>
+            </div>
+        </div>
+
+
+        <form role="form" th:action="@{/logout}" method="post">
+            <button type="submit" th:text="#{log.logout}" class="ui button">
+                ausloggen
+            </button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

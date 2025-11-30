@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+        <title th:text="#{lager.title}">Lager</title>
+    </head>
+    <body>
+        <nav>
+            <a th:href="@{/}">Home</a>
+        </nav>    
+    <div class="ui link cards">
+        <div class="ui card">
+            <form
+                    th:action="@{/lager/lebensmittelhinzufügen}"
+                    th:object="${LagerController}"
+                    method="post">
+                    <label th:text="#{Lebensmittel.art}" for="lebensmittelhinzufügen">Name</label>
+                    <input id="lebensmittelart" type="text" name="Lebensmittelart" th:value="${lebensmittelart}" required />
+                    <label th:text="#{Lebensmittel.anzahl}" for="lebensmittelhinzufügen">Anzahl</label>
+                    <input id="lebensmittelanzahl" type="number" name="Lebensmittelanzahl" th:value="${lebensmittelanzahl}" min="1" required />
+                    <label th:text="#{Lebensmittel.preis}" for="lebensmittelhinzufügen">Preis</label>
+                    <input id="lebensmittelpreis" type="number" name="Lebensmittelpreis" th:value="${{lebensmittelpreis}}" min="1" required />
+                    <button type="submit" class="btn btn-primary btn-sm">Hinzufügen</button>
+            </form>
+            <table class="ui celled table">
+                <thead>
+                <tr>
+                    <th th:text="#{Lebensmittel.art}">Name</th>
+                    <th th:text="#{Lebensmittel.anzahl}">Anzahl</th>
+                    <th th:text="#{Lebensmittel.preis}">Preis</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="lebensmittel : ${lager}">
+                    <td th:text="${lebensmittel.name}">Name</td>
+                    <td th:text="${stockMap[lebensmittel.id.toString()]}">Anzahl</td>
+                    <td th:text="${{lebensmittel.price}}">Preis</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

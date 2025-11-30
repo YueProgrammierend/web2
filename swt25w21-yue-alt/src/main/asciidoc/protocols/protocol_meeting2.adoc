@@ -1,0 +1,53 @@
+= Protokoll Gruppe 21
+
+Treffen am 20.10.2025
+
+Ort:      APB/E006
+Beginn:   10:00 Uhr 
+Ende:     10:55 Uhr
+
+__Schriftführer:__ 
+Zoe Maass
+
+*Nächstes Treffen:* +
+27.10.2025, 10:00 Uhr, APB-Foyer
+
+__Teilnehmer:__
+
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass (Protokollant)
+- Laran Wolf
+- Alexandra Reinhold
+- Haakon Frank
+- Yue Wu
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+- astah UML benutzen
+- IDEs variieren
+- Pair Programming Teams aufgeteilt (Zoe & Vanessa, Laran & Alex, Yue & Haakon)
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+- alle haben ihre guestbook erweiterung vorgestellt
+  - Vanessa: Emailfeld mit theoretischer Reggex validierung, Email mit Regenbogenübergang
+  - Alex: Profilbilder, Reaktions und Email hinzugefügt
+  - Laran: Font geändert, Schatten unter Cards hinzugefügt, Profession feld hinzugefügt
+  - Yue: Einträge können vom festgelegten Admin gelöscht werden
+  - Haakon: /
+
+== Planung des nächsten Sprints
+- Videoshop Erweitern:
+  - Rabattcodes (Zoe)
+  - Bug beim Bestellen (wenn man mehr kauft als da ist), Anzahl im Warenkorb anzeigen (Vanessa)
+  - Löschen von Warenkorb, Stückzahl verändern (Laran)
+  - Altersbegrenzung beim Registrieren und beim Kauf prüfen (Alex)
+  - Bestellungsübersicht user + Benutzername doppelt Bugfix (Haakon)
+  - Such und Filterfunktion (Yue)
+- Pflichtenheft für Festivalmanagement beginnen 
+  - Anforderungen erfassen/diskutieren
+  - Stakeholder
+  - Use Case Diagramm V1 + Beschreibung
+- Fragenkatalog entwickeln

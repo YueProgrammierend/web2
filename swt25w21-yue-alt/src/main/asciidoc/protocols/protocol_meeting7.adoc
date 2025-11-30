@@ -1,0 +1,85 @@
+= Protokoll Gruppe 21
+
+Treffen am 24.11.2025
+
+Ort:      APB/E009
+Beginn:   10:05 Uhr
+Ende:     11:07 Uhr
+
+__Schriftführer:__ Alexandra Reinhold
+
+*Nächstes Treffen:* +
+01.12.2025, 10:00 Uhr, APB/E009
+
+__Teilnehmer:__ 
+
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass
+- Laran Wolf 
+- Alexandra Reinhold  (Protokollant)
+- Haakon Frank (online)
+- Yue Wu (online)
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+
+- Zwischenpräsentation für Dienstag 2. DS den 02.12.2025
+- wenn man am 2.12. nicht anwesend sein kann, dann muss man an der Abschlusspräsentation teilnehmen
+- Design-Entscheidungen, Komponentenaufteilung, Aufgabenstellung erklären
+- Anwendungsprototyp präsentieren mit Rollenspiel
+- Anwendungsdaten hinzufügen
+- 10 min Diskussion im Anschluss
+- ZEITEINHALTUNG ÜBERAUS WICHTIG (geht bei der Bewertung der Präsentation zu 1/4 ein!!!)
+- Problem mit Haakon - Yue Branch (Cl Build)
+- gerne in den Lernraum gehen
+- Abgabe am 28.11. Mitternacht mit Entwicklerdoku
+- 50% Testabdeckung
+- vollständige Dokumentation
+
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub*
+// Wie ist der Status der im letzten Sprint erstellten Issues/veteilten Aufgaben?
+siehe git alles von in review fertig
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Aufgabe |Status |Bemerkung
+|#42     | Pflichtenheft: 10. GUI Prototyp | In Progress | wurde so von Adrian abgenommen, muss noch in das Pflichtenheft eingefügt werden
+|#22     | Zeitmanagement Künstler | In Review | cascade sollte angeschaut werden
+
+
+|===
+
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+
+- GUI wird gegengecheckt von Adrian
+- Festival und Location Klassendiagramm muss überarbeitet werden
+- Yue sollte aufpassen auf welchen Branches sie arbeitet und mehr mit der Gruppe kommunizieren
+- nichts in den obersten Ordnern des Repos schreiben
+- aktuellen Stände der Gruppen in der dazugehörigen Datei bei Opal
+- neuer Branch für Haakon - Yue Gruppe, um Fehler zu beseitigen
+- Login für interne und externe Mitarbeiter
+- externe Mitarbeiter sollten ihr Konto nur für ihre Festivals bekommen
+- interne Mitarbeiter können mt ihr Konto festivalübergreifend agieren (im Gegensatz zu externe)
+
+- Techniker rausnehmen, bei Artist Lohn umändern
+- Prototyp: "schwares Brett" für Mitteilungen, Screenshots einfügen
+
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+siehe Github
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Titel |Beschreibung |Verantwortlicher |Status
+|#54 | Überarbeitung Personal und Künstler | neuer Wissensstand aus der Konsultation nutzen für das Refactoring des aktuellen Codes | Alexandra | Ready
+|#29 | Zuteilung von Mitarbeiter auf Festivals | Mitarbeiter sollten auf Festivals zugeteilt werden können | Alexandra | Ready
+|===

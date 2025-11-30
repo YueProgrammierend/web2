@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">Meine Seite</title>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Festivalmanager coming soon</h1>
+    <nav>
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/festival}">Festival</a>
+        <a th:href="@{/createfestival}">Create Festival</a>
+        
+    </nav>
+</header>
+
+<main layout:fragment="content">
+    <h2>Create Festival</h2>
+    <form th:action="@{/createfestival}" th:object="${festivalForm}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id = "name"
+                th:field="*{name}"
+                required
+            />
+            <!--     ⬆️required wurde hinzugefügt, daher ist keine Fehlerprüfung mehr nötig.-->
+            <!--            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>-->
+        </div>
+        <div>
+            <label>Beginn:
+                <input type="datetime-local" th:field="*{startDate}" />
+                <div th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}">Start Date Error</div>
+            </label>
+        </div>
+        <div>
+            <label>Ende:
+                <input type="datetime-local" th:field="*{endDate}" />
+                <div th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}">End Date Error</div>
+            </label>
+        </div>
+
+        <div>
+            <label>Location:
+                <select th:field="*{locationId}">
+                    <option value="">Select a location</option>
+                    <option th:each="loc : ${locations}"
+                            th:value="${loc.locationId}"
+                            th:text="${loc.name}"></option>
+                </select>
+                <div th:if="${#fields.hasErrors('locationId')}" th:errors="*{locationId}">Location Error</div>
+            </label>
+        </div>
+
+        <div>
+            <button type="submit">Festival erstellen</button>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; SWP Gruppe 21</p>
+</footer>
+</body>
+</html>

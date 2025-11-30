@@ -1,0 +1,81 @@
+= Protokoll Gruppe 21
+
+Treffen am 17.11.2025
+
+Ort:      APB/E009
+Beginn:   10:01 Uhr 
+Ende:     11:01 Uhr
+
+__Schriftführer:__ Zoe Maass
+
+*Nächstes Treffen:* +
+24.11.2025, 10:00 Uhr, APB/E009
+
+__Teilnehmer:__ 
+
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass (Protokollant)
+- Laran Wolf 
+- Alexandra Reinhold
+- Haakon Frank
+- Yue Wu
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+
+- extra Aufgabe an Yue bis Dienstag 18.11.2025 20:00: Pflichtenheft Datenmodell, Akzeptanztestfälle Festival und 2 Features in Festival Komponente sonst Verwarnung
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub*
+// Wie ist der Status der im letzten Sprint erstellten Issues/veteilten Aufgaben?
+siehe git alles von in review fertig
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Aufgabe |Status |Bemerkung
+|#11 Kartenansicht     |Nachdem der Planer die Ticketpreise festgelegt hat, soll eine von ihm festgelegte Menge an Tickets erstellt werden. Einem authentifizierten Nutzer mit den ausreichenden Berechtigungen soll es möglich sein, eine tabellarische Übersicht der Karten einzusehen.       |Done      |Fertig implementiert
+|#18 Kartenpreis festlegen     |Der Preis der Karten kann verändert werden       |Done      |Fertig implementiert
+|#10 Künstlerliste     |Das System soll eine Liste mit den Kontaktdaten und Preisen der angeheuerten Künstler darstellen und speichern können.       |Done      |Fertig implementiert
+|#16 Lager Ansicht     |Das System soll eine Ansicht für den Lagerbestand bereitstellen. Authentifizierte Nutzer mit den ausreichenden Berechtigungen können den Lagerbestand einsehen.       |Done      |Fertig implementiert
+|#24 zum Lager hinzufügen     |Es soll möglich sein neue Lebensmittel zum Lager hinzuzufügen       |Done      |Fertig implementiert
+|#21 Kartenübersicht Spracheinträge hinzufügen     |Für alle Texte in der Kartenübersicht Spracheinträge anlegen       |Done      |Fertig implementiert
+|#15 weiteres Personal einstellen Übersicht     |Es sollen die weiteren Personalmitarbeiter in einer Übersicht angezeigt werden. Diese sollen einstellbar sein. Braucht Erweiterung für das manuelle Hinzufügen von Mitarbeitern.       |Done      |Fertig implementiert
+|#23 Plan des Geländes erstellen     |Es soll möglich sein den gesamtplan, des Geländes zu bearbeiten und die einzelnen Gegenstände darauf zu verorten. Dabei sollen Überschneidungen und Platzierungen Innerhalb oder Außerhalb der Grenzen beachtet werden.       |In Review      |Momentan nur aus vorgegebenen Geländeplänen auswählbar
+|#14 Bereiche erstellen     |Es soll möglich sein, die verschiedenen Bereiche mit ihren Attributen und Methoden zu haben. (Bereiche: Toiletten, Bühne, Catering)       |In Review      |Momentan nur in vorgegebenem Plan veränderbar
+|#31 Termin festlegen und error testen     |…       |In Progress      |Termin kann festgelegt werden, Errortesting funktioniert noch nicht
+|#8 Festival Erstellung     |Ein authentifizierter Nutzer (Planer, Manager) soll ein Festival erstellen und diesem einen Termin und eine Location zuordnen können.       |In Progress      |Kann mit vorgegebenen Locations erstellt werden
+|#19 Karten ausdrucken     |Tickets können ausgedruckt werden, ausgedruckte Tickets werden vom Bestand abgezogen       |In Progress      |Werden im terminal Pseudo gedruckt
+|#12 Festival anzeigen     |…       |In Progress      |Grob implementiert
+|===
+
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+
+- alles von letztem mal implementiert
+- Yue und Haakon: Festival erstellbar, wirft keinen Error, sondern fügt das einfach nicht hinzu (Location identifier statt long)
+- Error Messages existieren, Code funktioniert aber nicht
+- ist momentan zu wenig
+- Datenmodell fehlt
+- Versionen nutzen
+- Akzeptanztestfälle für festival fehlen
+- Initializer und Manager nutzen
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+siehe Github
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Titel |Beschreibung |Verantwortlicher |Status
+|#25     |Speisen auswählen und abrechnen     |Das Cateringpersonal (und andere) sollen im Lager vorhandene Speisen auswählen können, diese werden dann abgerechnet            |Zoe, Vanessa                |Ready
+|#17     |Location erstellen     |Es soll möglich sein Festivals eine Location zuzuordnen            |Haakon,Yue                |In Progress
+|#20     |Karten auf Gültigkeit prüfen     |Überprüfung ob ein Ticket bereits valide ist und ob es bereits gescannt wurde            |Vanessa, Zoe                |Ready
+|#46     |Bühnen und Wiesen mietbar machen und Gesamtkosten berechnen | Bühnen können gemietet werden und es soll auch schon ein Preis für die Gesamtkosten ausgegeben werden | Laran |ready
+|#42     | Pflichtenheft: 10. GUI Prototyp | es soll ein erster Prototyp entstehen (Wireframe und Figma Prototyp) | Laran, Alexandra | Ready
+|#22     | Zeitmanagement Künstler | Künstler werden auf ihre Bühnen zugewiesen | Alexandra | Ready
+|===

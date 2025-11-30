@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="#{log.login}">Anmelden</title>
+</head>
+<body>
+    <section layout:fragment="content">
+    <!-- Gast -->
+    <div sec:authorize="isAnonymous()">
+        <form role="form" th:action="@{/login}" method="post">
+
+            <div class="field">
+                <label th:text="#{log.name}" for="username">Username</label>
+                <input type="text" id="username" name="username" autofocus />
+            </div>
+
+            <div class="field">
+                <label th:text="#{log.password}" for="password">Password</label>
+                <input type="password" id="password" name="password" />
+            </div>
+
+            <button type="submit" th:text="#{log.login}" class="ui button">
+                Anmelden
+            </button>
+
+        </form>
+    </div>
+
+    </section>
+</body>
+</html>

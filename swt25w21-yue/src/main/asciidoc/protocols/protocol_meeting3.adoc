@@ -1,0 +1,72 @@
+= Protokoll Gruppe 21
+
+Treffen am 27.10.2025
+
+Ort:      APB E009 +
+Beginn:   10:00 Uhr +
+Ende:     11:00 Uhr
+
+__Schriftführer:__
+Haakon Frank
+
+*Nächstes Treffen:* +
+03.11.2025, 10:00 Uhr, APB-Foyer
+
+__Teilnehmer:__
+
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass 
+- Laran Wolf
+- Alexandra Reinhold
+- Haakon Frank (Protokollant)
+- Yue Wu (Online)
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+- Dokumentationsbranch erstellt
+- Yue keine Teinahme am Pflichtenheft
+- Abgabe Pflichtenheft und Videoshop bis 31.10. 23:59
+
+
+
+== Aktueller Stand
+=== Erste Diagramme im Pflichtenheft
+    - UseCase Diagramm größer machen(Anschaulichkeit + Inhalt)
+    - Sequenzdiagramme überarbeiten
+    
+
+=== Fragenkatalog (Fragen siehe extra Dokument)
+    - Browser: Alle gängigen
+    - Stakeholder: Angestellte aufteilen(Verkäufer, Planer etc.), Kunde=Manager und auf dem Festival tätig
+    - Visualisierung: 2D Übersicht (Woist der Breich? Ist der Bereich gesperrt?)
+    - Angebote einholen: Kontaktaufnahme nicht teil. Angebote in der software
+    - Spielplan: essentieller Bestandteil, Zeit wird Individuell festgelegt
+    - Wirtschaftsdaten visualisierung als Graph: Rot oder grüner Text, Graph Optional
+    - Tickets Barcode/NUmmer: egal
+    - Verkauf: Ticketverkäufer muss Tickets nur ausdrucken können, Tickets sollen allgemeine Infos enthalten
+    - Personalverwaltung: Planungsabteilung für aufgaben ohne menschlichen Kontakt und erstellen Logins für Festivalmitarbeiter, Manager für menschlichen Kontakt zuständig und erstellt login für Planer, Manager kann alles übernehmen/aushelfen
+    - Terminal aussehen: jeder soll nur das sehen, worauf er zugriff hat, Manager alles
+    - Nachrrichten einsehen: Nachrichtensystem sind eher Mitteilungen 
+    - Bühnen: Bühnen werden immer neu gemietet
+    - Kontakt: Messenger, alles für alle Sichtbar
+    - Kartenpreis festlegen: Planer legt Preis fest
+
+=== Videoshop
+a. Vanessa: Bug bei mehr Bestellen, als da + Anzeige, wie viele bereits im Warenkorb: Hauptteil fertig
+b. Zoe:Rabattcodes: Teile implementiert, Probleme beim Zusammenspiel
+c. Yue: Such+/Filterfunktion : Frontend ist was da (Backend?)
+d. Haakon: Nutzer sieht seine Bestellungen (Fehlt), Benutzername doppelt Bugfix (Fertig)
+e. Laran: Löschen für Warenkorb (teilweise) + Stückzahl verändern (Fertig)
+f. Alexandra: Altersbegrenzunge für Filme und Abfrage beim Registrieren
+und Kaufen (Fertig)
+
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+
+- bisheriges Pflichtenheft Überarbeiten
+- Pflichtenheft bis 9 ergänzen
+- Videoshop fertig machen
+
+

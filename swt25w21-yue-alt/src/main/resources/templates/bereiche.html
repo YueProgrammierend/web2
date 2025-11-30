@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bereichsübersicht</title>
+
+</head>
+<a th:href="@{/}">Home</a>
+<body>
+<div class="container mt-4">
+    <h1>Bereichsübersicht</h1>
+    <div class="plan-container ">
+        <div class="plan">
+            <img alt="Plan 1" th:src="@{/resources/svg/Bereichsplan1.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan1}">
+                <button type="submit">Plan 1 wählen</button>
+            </form>
+            <img alt="Plan 2" th:src="@{/resources/svg/Bereichsplan2.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan2}">
+                <button type="submit">Plan 2 wählen</button>
+            </form>
+            <img alt="Plan 3" th:src="@{/resources/svg/Bereichsplan3.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan3}">
+                <button type="submit">Plan 3 wählen</button>
+            </form>
+            <img alt="Plan 4" th:src="@{/resources/svg/Bereichsplan4.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan4}">
+                <button type="submit">Plan 4 wählen</button>
+            </form>
+            <img alt="Plan 5" th:src="@{/resources/svg/Bereichsplan5.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan5}">
+                <button type="submit">Plan 5 wählen</button>
+            </form>
+            <img alt="Plan 6" th:src="@{/resources/svg/Bereichsplan6.svg}">
+            <form method="post" th:action="@{/bereiche/init/Bereichsplan6}">
+                <button type="submit">Plan 6 wählen</button>
+            </form>
+
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Breite</th>
+                <th>Länge</th>
+                <th>Mietkosten</th>
+                <th>Kabinen</th>
+                <th>Stellplätze</th>
+                <th>gesperrt?</th>
+                <th>gemietet?</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="bereich : ${bereiche}">
+                <td th:text="${bereich.id}"></td>
+                <td th:text="${bereich.name}"></td>
+                <td th:text="|${bereich.positionX}, ${bereich.positionY}|"></td>
+                <td th:text="${bereich.width}"></td>
+                <td th:text="${bereich.height}"></td>
+                <td>
+                    <span th:if="${!bereich.price.isZero()}"
+                          th:text="|${bereich.price}|">
+                    </span>
+                    <span th:if="${bereich.price.isZero()}">
+                        Nicht mietbar
+                    </span>
+                </td>
+                <td>
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Toiletten)}"
+                          th:text="${bereich.stallCount}">
+                    </span>
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Buehne)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Wiese)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Camping)
+                                    or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)}">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Camping)}"
+                          th:text="${bereich.pitchCount}">
+                    </span>
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Buehne)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Wiese)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Toiletten)
+                                    or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)}">
+                        -
+                    </span>
+                </td>
+                <td>
+                    <span th:if="${bereich.blocked}">Ja</span>
+                    <span th:if="${!bereich.blocked}">Nein</span>
+
+
+                </td>
+                <td>
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Toiletten)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Camping)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                    or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)
+                                    and bereich.rented == true and bereich.price != null and bereich.price.isZero(0)>0}">Ja</span>
+
+                    <span th:if="${bereich instanceof T(kickstart.bereichsplanung.Toiletten)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Camping)
+                                    or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                    or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)
+                                    and bereich.rented == false}">zu vermieten</span>
+
+                    <span th:if="${bereich.price.isZero()}">Nicht mietbar</span>
+
+
+                </td>
+                <td>
+                    <form th:action="@{/bereiche/bearbeiten/{id}(id=${bereich.id})}">
+                        <button class="btn btn-primary" type="submit">Bearbeiten</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post"
+                          th:action="@{/bereiche/block}" th:if="${bereich.blocked != null and !bereich.blocked}">
+                        <input name="id" th:value="${bereich.id}" type="hidden">
+                        <button type="submit">Sperren</button>
+                    </form>
+
+                    <form method="post"
+                          th:action="@{/bereiche/unlock}" th:if="${bereich.blocked != null and bereich.blocked}">
+                        <input name="id" th:value="${bereich.id}" type="hidden">
+                        <button type="submit">entsperren</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post"
+                          th:action="@{/bereiche/rent}" th:if="${bereich instanceof T(kickstart.bereichsplanung.Toiletten)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.Camping)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)
+                                                            and bereich.rented}">
+                        <input name="id" th:value="${bereich.id}" type="hidden">
+                        <button type="submit">Mieten</button>
+                    </form>
+
+                    <form method="post"
+                          th:action="@{/bereiche/release}" th:if="${bereich instanceof T(kickstart.bereichsplanung.Toiletten)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.Camping)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.Catering)
+                                                            or bereich instanceof T(kickstart.bereichsplanung.ErsteHilfeZelt)
+                                                            and !bereich.rented}">
+                        <input name="id" th:value="${bereich.id}" type="hidden">
+                        <button type="submit">Freigeben</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

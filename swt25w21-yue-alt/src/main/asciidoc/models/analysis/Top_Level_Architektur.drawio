@@ -1,0 +1,462 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.2">
+  <diagram name="Page-1" id="wRn0vDZiHGrvg8SfP8Nl">
+    <mxGraphModel grid="1" page="1" gridSize="14" guides="1" tooltips="1" connect="0" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object placeholders="1" c4Name="Cateringpersonal" c4Type="Person" c4Description="Mitarbeiter des Caterings" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-1">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="50" y="930" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="270" />
+              <mxPoint x="1060" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-53" value="Logins verteilen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-52">
+          <mxGeometry x="0.229" y="-2" relative="1" as="geometry">
+            <mxPoint x="31" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.108;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="532" />
+              <mxPoint x="301" y="532" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="860" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="20" y="-480" />
+              <mxPoint x="20" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="-480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Name="Manager" c4Type="Person" c4Description="Mitarbeiter mit Admin rechten" label="%c4Name%&lt;br&gt;[%c4Type%]&lt;br&gt;&lt;br&gt;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-3">
+          <mxCell style="fontSize=14;dashed=0;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;textShadow=0;labelBorderColor=none;labelBackgroundColor=none;html=1;" vertex="1" parent="1">
+            <mxGeometry x="30" y="-570" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Planer" c4Type="Person" c4Description="Mitarbeiter der Planungsabteilung" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-4">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="1330" y="270" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Verkaufsmitarbeiter" c4Type="Person" c4Description="Mitarbeiter im Verkauf" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-5">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="1410" y="850" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Sicherheitspersonal" c4Type="Person" c4Description="Mitarbeiter des Sicherungspersonals" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-6">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="1400" y="520" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Gast" c4Type="Person" c4Description="anonymer Gast auf dem Festival " label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-7">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="1020" y="970" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Festivalleiter" c4Type="Person" c4Description="Festgelegte Leiter des Festivals" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="HEvc0CFo8aCbmX7EkY-W-12">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;convertToSvg=0;fontStyle=0" vertex="1" parent="1">
+            <mxGeometry x="1360" y="-240" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1102.5" as="sourcePoint" />
+            <mxPoint x="940" y="777.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="990" y="1103" />
+              <mxPoint x="990" y="1040" />
+              <mxPoint x="940" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-26" value="Gelände- und Spielplan abrufen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-16">
+          <mxGeometry x="0.0221" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="-136" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-5" target="HEvc0CFo8aCbmX7EkY-W-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="710" />
+              <mxPoint x="1200" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-27" value="Tickets verkaufen&lt;div&gt;&amp;nbsp;und ausdrucken&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-18">
+          <mxGeometry x="-0.1122" y="1" relative="1" as="geometry">
+            <mxPoint x="-154" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.496;exitY=0.016;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.004;entryY=0.753;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-4" target="HEvc0CFo8aCbmX7EkY-W-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1070" y="12" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1429" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-30" value="&lt;div&gt;Bühne,Toiletten und&amp;nbsp;&lt;/div&gt;&lt;div&gt;Catering anpassen,&lt;/div&gt;&lt;div&gt;Bereiche sperren&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-19">
+          <mxGeometry x="-0.1414" y="2" relative="1" as="geometry">
+            <mxPoint x="78" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392" y="-480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-1" target="HEvc0CFo8aCbmX7EkY-W-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="154" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-24" value="einloggen,Speisen&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;aus-&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;wählen&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&amp;nbsp;und abrechnen&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-22">
+          <mxGeometry x="-0.2265" relative="1" as="geometry">
+            <mxPoint x="151" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Festivalplanungs Software" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-31">
+          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="250" y="-340" width="1080" height="1250" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Terminals" c4Type="Component" c4Technology="Subsystem" c4Description="Infoscreen" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="820" y="660" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Catering-Terminal" c4Type="Component" c4Technology="Subsystem" c4Description="Speisen management System" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-33">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="460" y="750" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Daten Visualisierung" c4Type="Component" c4Technology="Subsystem" c4Description="Daten Visualisierungs System" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="320" y="-200" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.534;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-12" target="HEvc0CFo8aCbmX7EkY-W-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="230" as="sourcePoint" />
+            <mxPoint x="790" y="-80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="768" y="-130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-42" value="Lager einsehen,&lt;div&gt;nachbestellen,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Nachrichten&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;sehen/schreiben,&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fillOpacity=0;" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-41">
+          <mxGeometry x="-0.5786" y="-2" relative="1" as="geometry">
+            <mxPoint x="-364" y="162" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Bereichsplanung" c4Type="Component" c4Technology="Subsystem" c4Description="Subsystem zum erstellen und Bearbeiten der Festivalbereiche" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-40">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="950" y="-10" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Personalplanung" c4Type="Component" c4Technology="Subsystem" c4Description="Personalmanagement" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-43">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="300" y="520" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="b_kxSoAhQX0VpOT0dPYO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.809;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-45" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="868" y="42" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1134" y="182" />
+              <mxPoint x="602" y="182" />
+              <mxPoint x="602" y="-103" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_kxSoAhQX0VpOT0dPYO-4" value="Besucherzahlen&amp;nbsp;&lt;div&gt;übermitteln&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="b_kxSoAhQX0VpOT0dPYO-3">
+          <mxGeometry x="-0.3444" relative="1" as="geometry">
+            <mxPoint y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Tickets" c4Type="Component" c4Technology="Subsystem" c4Description="Subsystem zur Ticket Verwaltung" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-45">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="1080" y="760" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-43" target="HEvc0CFo8aCbmX7EkY-W-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.374;exitY=0.992;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-35" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="-99.99999999999989" as="sourcePoint" />
+            <mxPoint x="880" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="140" />
+              <mxPoint x="896" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-58" value="&lt;div&gt;Spielplan übermitteln&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-48">
+          <mxGeometry x="-0.2954" y="-4" relative="1" as="geometry">
+            <mxPoint x="259" y="360" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.298;exitY=1.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1022" y="658" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1022" y="114" />
+              <mxPoint x="1022" y="114" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-66" value="Lageplan übermitteln" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-49">
+          <mxGeometry x="-0.3013" y="4" relative="1" as="geometry">
+            <mxPoint x="-18" y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="616" />
+              <mxPoint x="1218" y="616" />
+              <mxPoint x="1218" y="762" />
+            </Array>
+            <mxPoint x="1218" y="762" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-51" value="Ticket überprüfen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-50">
+          <mxGeometry x="-0.2478" y="2" relative="1" as="geometry">
+            <mxPoint x="-85" y="42" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.497;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="809.9" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="760" y="810" />
+              <mxPoint x="760" y="580" />
+            </Array>
+            <mxPoint x="759.2800000000002" y="360.01999999999987" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-57" value="Mitteilung das&amp;nbsp;&lt;div&gt;Lagerbestand&lt;div&gt;&amp;nbsp;niedrig ist&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-56">
+          <mxGeometry x="0.1349" y="1" relative="1" as="geometry">
+            <mxPoint x="-9" y="-121" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-4" target="HEvc0CFo8aCbmX7EkY-W-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1580" y="390" />
+              <mxPoint x="1580" y="-370" />
+              <mxPoint x="770" y="-370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HEvc0CFo8aCbmX7EkY-W-64" value="Festival Anlegen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HEvc0CFo8aCbmX7EkY-W-61">
+          <mxGeometry x="-0.2052" y="-3" relative="1" as="geometry">
+            <mxPoint x="-813" y="-86" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="-9" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1010" y="-80" />
+              <mxPoint x="1010" y="-9" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-10" value="Spielplan erstellen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="qupDnMAEqQ6g_9mpnUw2-9">
+          <mxGeometry x="0.2436" y="-2" relative="1" as="geometry">
+            <mxPoint x="6" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="-310" />
+              <mxPoint x="392" y="-310" />
+            </Array>
+            <mxPoint x="392" y="-196" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-12" value="Besucher, Bühnenbelegung&lt;div&gt;&amp;nbsp;und Verkaufszahlen einsehen&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="qupDnMAEqQ6g_9mpnUw2-11">
+          <mxGeometry x="-0.6649" relative="1" as="geometry">
+            <mxPoint x="-943" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-1" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-5" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-6" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="520" />
+              <mxPoint x="1400" y="500" />
+              <mxPoint x="940" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qupDnMAEqQ6g_9mpnUw2-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-4" target="HEvc0CFo8aCbmX7EkY-W-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-15" value="Gelände- und Spielplan&lt;div&gt;&amp;nbsp;abrufen&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="qupDnMAEqQ6g_9mpnUw2-16">
+          <mxGeometry x="0.7569" y="-4" relative="1" as="geometry">
+            <mxPoint x="14" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.76;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-45" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="420" />
+              <mxPoint x="502" y="420" />
+            </Array>
+            <mxPoint x="512" y="-30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-2" value="Verkaufte Tickets&lt;div&gt;&amp;nbsp;mit Preis übermitteln&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="-bHM4aAGFP0GbyrNMdf7-1">
+          <mxGeometry x="-0.4072" y="1" relative="1" as="geometry">
+            <mxPoint x="76" y="189" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="520" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-4" value="Personal- und&amp;nbsp;&lt;div&gt;Künstlerkosten übermitteln&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="-bHM4aAGFP0GbyrNMdf7-3">
+          <mxGeometry x="-0.7768" y="-1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.183;exitY=-0.001;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="-120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="684" y="-120" />
+              <mxPoint x="560" y="-120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-6" value="Lager einsehen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="-bHM4aAGFP0GbyrNMdf7-5">
+          <mxGeometry x="-0.2109" relative="1" as="geometry">
+            <mxPoint x="-14" y="49" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="-140" as="sourcePoint" />
+            <mxPoint x="720" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Festivalerstellung" c4Type="Component" c4Technology="Subsystem" c4Description="Subsystem zur erstellung eines neuen Festivals" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-37">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="650" y="-270" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-35" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-37" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="-220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-12" value="Kosten übermitteln" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="-bHM4aAGFP0GbyrNMdf7-11">
+          <mxGeometry x="0.5313" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.001;exitY=0.582;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-47" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Personalabteilung" c4Type="Person" c4Description="Managed Künstler und Personal" label="%c4Name%&#xa;[%c4Type%]&#xa;&#xa;%c4Description%" id="-bHM4aAGFP0GbyrNMdf7-16">
+          <mxCell style="fontSize=14;dashed=0;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" vertex="1" parent="1">
+            <mxGeometry x="30" y="590" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.095;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-bHM4aAGFP0GbyrNMdf7-16" target="HEvc0CFo8aCbmX7EkY-W-43">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="532" />
+              <mxPoint x="301" y="532" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-bHM4aAGFP0GbyrNMdf7-18" value="Künstlerangebot einholen und&lt;div&gt;&amp;nbsp;Personal einstellen&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="-bHM4aAGFP0GbyrNMdf7-17">
+          <mxGeometry x="0.1705" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Verwaltung" c4Type="Component" c4Technology="Subsystem" c4Description="Subsystem zur Verwaltung" label="&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="HEvc0CFo8aCbmX7EkY-W-47">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];fillStyle=auto;gradientColor=none;" vertex="1" parent="1">
+            <mxGeometry x="640" y="240" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="w56bHNBXBJjBlYvDsviq-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.006;entryY=0.752;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-3" target="HEvc0CFo8aCbmX7EkY-W-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1300" y="-480" />
+              <mxPoint x="1300" y="80" />
+              <mxPoint x="1200" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_kxSoAhQX0VpOT0dPYO-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.961;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HEvc0CFo8aCbmX7EkY-W-33" target="HEvc0CFo8aCbmX7EkY-W-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_kxSoAhQX0VpOT0dPYO-2" value="Verkaufszahlen&amp;nbsp;&lt;div&gt;mit Gewinn übermitteln&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="b_kxSoAhQX0VpOT0dPYO-1">
+          <mxGeometry x="-0.6771" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="68" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

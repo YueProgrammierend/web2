@@ -1,0 +1,72 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Festivals</title>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+</head>
+
+<body>
+    <nav th:insert="~{navigation :: navigation}"></nav>
+    <main layout:fragment="content">
+        <h2 th:text="${title}">Festivals</h2>
+
+        <div>
+            <a th:href="@{/festival}">
+                <button type="button">Alles</button>
+            </a>
+            <a th:href="@{/festival/today}">
+                <button type="button">Heutige Festival anzeigen</button>
+            </a>
+            <!-- Das selbe wie davor? Was ist der Unterschied?
+            <a th:href="@{/festival/only-today}">
+                <button type="button">Nur heutige Festival anzeigen</button>
+            </a>
+            -->
+        </div>
+
+        <table>
+            <thead style="border-collapse: collapse;">
+                <tr>
+                    <th style="padding-right: 32px;">Name</th>
+                    <th style="padding-right: 32px;">Beginndaten</th>
+                    <th style="padding-right: 32px;">Enddaten</th>
+                    <th style="padding-right: 32px;">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="festival:${festivals}">
+                    <!--Festival Name-->
+                    <td style="padding-right: 16px;" th:text="${festival.name}"></td>
+                    <!--Datum-->
+                    <!--Festivalbeginn-->
+                    <td style="padding-right: 16px;" th:text="${#temporals.format(festival.startDate, 'dd.MM.yyyy HH:mm')}"></td>
+                    <!--Festivalende-->
+                    <td style="padding-right: 16px;" th:text="${#temporals.format(festival.endDate, 'dd.MM.yyyy HH:mm')}"></td>
+                    <!--Location Name-->
+                    <td style="padding-right: 16px;" th:text="${festival.location.name}"></td>
+                    <td>
+                        <form th:action="@{/festival/assign/{id}(id=${festival.id.id})}" method="get">
+                            <button type="submit" th:text="#{assign}">zuordnen</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a th:href="@{/festival/edit/{id}(id=${festival.id.id})}" >
+                            <button type="submit">ändern</button>
+                        </a>
+                        <form th:action="@{/festival/delete/{id}(id=${festival.id.id})}" method="post">
+                            <button type="submit">löschen</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</main>
+</body>
+</html>
+```
+

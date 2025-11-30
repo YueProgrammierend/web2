@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="${title}">Personalkatalog</title>
+</head>
+
+<body>
+
+<header>
+    <h1 th:text="${title}">Personalkatalog</h1>
+</header>
+
+<nav th:insert="~{navigation :: navigation}"></nav>
+
+<section layout:fragment="content">
+
+    <h2>Neues Personal hinzufügen</h2>
+
+    <form th:action="@{/personal/new}" method="post">
+
+        <label>Vorname:
+            <input type="text" name="vorName" required>
+        </label><br/>
+
+        <label>Nachname:
+            <input type="text" name="nachName" required>
+        </label><br/>
+
+        <label>Email:
+            <input type="email" name="email">
+        </label><br/>
+
+        <label>Telefon:
+            <input type="text" name="telefon">
+        </label><br/>
+
+        <label>Typ:
+            <select name="type">
+                <option th:each="t : ${types}" th:value="${t}" th:text="${t}"></option>
+            </select>
+        </label><br/>
+
+        <label>Status:
+            <select name="status">
+                <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
+            </select>
+        </label><br/>
+
+        <label>Stundenlohn (€):
+            <input type="number" step="0.01" name="stundenlohn">
+        </label><br/>
+
+        <button type="submit">Speichern</button>
+    </form>
+
+    <h2>Personalliste</h2>
+
+    <div th:if="${#lists.isEmpty(catalog)}">
+        <p>Kein Personal gefunden.</p>
+    </div>
+
+    <div th:each="personal : ${catalog}">
+        <hr/>
+
+        <!-- Name des Mitarbeiters -->
+        <p  th:text="${personal.vorName + ' ' + personal.name}">Stage Name</p>
+
+        <!-- Kontaktdaten und Status -->
+        <div>
+            <p>Typ: <span th:text="${personal.type}">verkauf, catering oder security</span></p>
+            <p>E-Mail: <span th:text="${personal.email}">info@example.com</span></p>
+            <p>Telefon: <span th:text="${personal.telefon}">+49 123 4567</span></p>
+            <p>Status: <span th:text="${personal.status}">EINSTELLBAR</span></p>
+        </div>
+
+        <form th:action="@{/personal/{id}/status(id=${personal.id})}" method="post">
+            <select name="status">
+                <option th:each="s : ${T(kickstart.staffmanagement.EinstellStatus).values()}"
+                        th:value="${s}"
+                        th:text="${s}"
+                        th:selected="${s} == ${personal.status}">
+            </select>
+            <button type="submit">Status ändern</button>
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+</html>

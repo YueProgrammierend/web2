@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="${title}">Künstlerkatalog</title>
+</head>
+
+<body>
+
+<header>
+    <h1 th:text="${title}">Künstlerkatalog</h1>
+</header>
+
+<nav th:insert="~{navigation :: navigation}"></nav>
+
+<section layout:fragment="content">
+
+    <h2>Neuen Künstler hinzufügen</h2>
+
+    <!-- Fehlernachricht anzeigen -->
+    <div th:if="${error}">
+        <p style="color:red;" th:text="${error}"></p>
+    </div>
+
+    <div th:if="${type == null}">
+        <form th:action="@{/kuenstlerkatalog}" method="get">
+            <label for="type">Typ:</label>
+            <select id="type" name="type" required>
+                <option value="">-- Bitte wählen --</option>
+                <option value="SoloKuenstler">Solo</option>
+                <option value="Band">Band</option>
+            </select>
+            <button type="submit">Weiter</button>
+        </form>
+    </div>
+
+    <div th:if="${type != null}">
+        <form th:action="@{/artist/add}" method="post">
+            <input type="hidden" name="type" th:value="${type}" />
+
+            <div th:if="${type == 'SoloKuenstler'}">
+                <label for="vorName">Vorname:</label>
+                <input type="text" id="vorName" name="vorName"
+                       th:value="${vorName}"/><br/>
+
+                <label for="nachName">Nachname:</label>
+                <input type="text" id="nachName" name="nachName"
+                       th:value="${nachName}"/><br/>
+            </div>
+
+            <label for="name">Künstlername:</label>
+            <input type="text" id="name" name="name" required
+                   th:value="${name}"/><br/>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required
+                   th:value="${email}"/><br/>
+
+            <label for="telefon">Telefon:</label>
+            <input type="text" id="telefon" name="telefon"
+                   th:value="${telefon}"/><br/>
+
+            <label for="stundenlohn">Gage / Stundenlohn:</label>
+            <input type="number" id="stundenlohn" name="stundenlohn" step="0.01"
+                   th:value="${stundenlohn}"/><br/>
+
+            <label for="technicianCount">Anzahl Techniker:</label>
+            <input type="number" id="technicianCount" name="technicianCount"
+                   th:value="${technicianCount}"/><br/>
+
+            <button type="submit">Künstler hinzufügen</button>
+        </form>
+    </div>
+
+    <h2>Musikerliste</h2>
+
+    <div th:if="${#lists.isEmpty(catalog)}">
+        <p>Keine Künstler gefunden.</p>
+    </div>
+
+    <div th:each="kuenstler : ${catalog}">
+        <hr/>
+
+        <p th:text="${kuenstler.name}">Stage Name</p>
+
+        <!-- nur für SoloKuenstler -->
+        <span th:if="${kuenstler instanceof T(kickstart.staffmanagement.kuenstler.SoloKuenstler)}"
+              th:text="${kuenstler.vorName + ' ' + kuenstler.nachName}">
+        </span>
+
+        <div>
+            <p>Typ: <span th:text="${kuenstler.type}">solo oder band</span></p>
+            <p>E-Mail: <span th:text="${kuenstler.email}">info@example.com</span></p>
+            <p>Telefon: <span th:text="${kuenstler.telefon}">+49 123 4567</span></p>
+            <p>Gage: <span th:text="${kuenstler.stundenlohn}">teuri</span></p>
+            <p>Anzahl der Techniker: <span th:text="${kuenstler.technicianCount}">3</span></p>
+            <p>Status: <span th:text="${kuenstler.status}">EINSTELLBAR</span></p>
+        </div>
+
+        <form th:action="@{/artist/{id}/status(id=${kuenstler.id})}" method="post">
+            <select name="status">
+                <option th:each="s : ${T(kickstart.staffmanagement.EinstellStatus).values()}"
+                        th:value="${s}"
+                        th:text="${s}"
+                        th:selected="${s} == ${kuenstler.status}">
+                </option>
+            </select>
+            <button type="submit">Status ändern</button>
+        </form>
+    </div>
+
+</section>
+
+</body>
+</html>

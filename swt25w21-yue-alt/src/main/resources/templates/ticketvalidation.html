@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="#{tickets.validate}">Validate Ticket</title>
+</head>
+    <body>
+        <nav>
+            <a th:href="@{/}">Home</a>
+        </nav>
+
+        <div>
+            <h3 th:text="#{tickets.validate}">Validate Ticket</h3>
+            <form th:action="@{/ticketvalidation/check}" method="post">
+                <div class="field">
+                    <label th:text="#{tickets.id}">ID</label>
+                    <input type="text" name="soldTicketId" placeholder="Ticket-ID eingeben" required>
+                </div>
+                <button type="submit" th:text="#{tickets.check}">Check</button>
+            </form>
+            <div th:if="${validationMessage != null}">
+                <div class="ui message" th:classappend="${validTicket} ? ' positive' : ' negative'">
+                    <p th:text="${validationMessage}"></p>
+                </div>
+                <div th:if="${validTicket}">
+                    <h4 th:text="#{tickets.info}">Ticket Information</h4>
+                    <div>
+                        <label th:text="#{tickets.id}">ID</label>:
+                        <span th:text="${validatedTicket.soldTicketId}"></span>
+                    </div>
+                    <div>
+                        <label th:text="#{tickets.name}">Name</label>:
+                        <span th:text="${validatedTicket.name}"></span>
+                    </div>
+                    <div>
+                        <label th:text="#{tickets.category}">Category</label>:
+                        <span th:text="${validatedTicket.type}"></span>
+                    </div>
+                    <div>
+                        <label th:text="#{tickets.price}">Price</label>:
+                        <span th:text="${validatedTicket.price}"></span>
+                    </div>
+                    <div>
+                        <label th:text="#{tickets.soldAt}">Sold at</label>:
+                        <span th:text="${validatedTicket.soldAt}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

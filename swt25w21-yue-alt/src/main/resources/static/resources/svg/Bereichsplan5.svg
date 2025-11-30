@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+        width="100mm"
+        height="90mm"
+        viewBox="0 0 100 90"
+        version="1.1"
+        id="svg1"
+        xmlns="http://www.w3.org/2000/svg">
+    <defs
+            id="defs1"/>
+    <g
+            id="layer1"
+            transform="translate(-0.20398352,-0.40796705)">
+        <rect
+                style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+                id="rect1"
+                width="100"
+                height="90"
+                x="0"
+                y="0"/>
+    </g>
+    <g
+            id="layer2"
+            transform="translate(-0.20398352,-0.40796705)">
+        <rect
+                style="fill:#e79797;fill-opacity:1;stroke-width:0.264583"
+                id="Camping1"
+                width="45"
+                height="30"
+                x="0"
+                y="60"/>
+
+        <rect
+                style="fill:#e79797;fill-opacity:1;stroke-width:0.264583"
+                id="Camping2"
+                width="45"
+                height="30"
+                x="55"
+                y="60"/>
+
+
+        <rect
+                style="fill:#97b3e7;fill-opacity:1;stroke-width:0.264583"
+                id="Catering1"
+                width="10"
+                height="40"
+                x="45"
+                y="20"/>
+
+        <rect
+                style="fill:#e7cd97;fill-opacity:1;stroke-width:0.264583"
+                id="Toilette1"
+                width="100"
+                height="10"
+                x="0"
+                y="0"/>
+
+        <rect
+                style="fill:#97e2e7;fill-opacity:1;stroke-width:0.264583"
+                id="Erste-Hilfe"
+                width="10"
+                height="30"
+                x="45"
+                y="60"/>
+
+        <rect
+                style="fill:#bae797;fill-opacity:1;stroke-width:0.264583"
+                id="Wiese1"
+                width="100"
+                height="10"
+                x="0"
+                y="10"/>
+
+        <rect
+                style="fill:#bae797;fill-opacity:1;stroke-width:0.264583"
+                id="Wiese2"
+                width="25"
+                height="40"
+                x="55"
+                y="20"/>
+
+        <rect
+                style="fill:#bae797;fill-opacity:1;stroke-width:0.264583"
+                id="Wiese3"
+                width="25"
+                height="40"
+                x="20"
+                y="20"/>
+
+        <rect
+                style="fill:#c597e7;fill-opacity:1;stroke-width:0.264583"
+                id="Bühne1"
+                width="20"
+                height="40"
+                x="80"
+                y="20"/>
+        <rect
+                style="fill:#c597e7;fill-opacity:1;stroke-width:0.264583"
+                id="Bühne2"
+                width="20"
+                height="40"
+                x="0"
+                y="20"/>
+
+        <text x="1" y="4" fill="#fff" font-size="3" font-family="Helvetica">0,0</text>
+        <text x="1" y="89" fill="#fff" font-size="2.9" font-family="Helvetica">0,90</text>
+        <text x="92" y="4" fill="#fff" font-size="3" font-family="Helvetica">90,0</text>
+        <text x="89" y="89" fill="#fff" font-size="3" font-family="Helvetica">100,90</text>
+        <text x="46" y="70" fill="#fff" font-size="3" font-family="Helvetica">Erste</text>
+        <text x="49" y="74" fill="#fff" font-size="3" font-family="Helvetica">-</text>
+        <text x="46" y="78" fill="#fff" font-size="3" font-family="Helvetica">Hilfe</text>
+        <text x="40" y="7" fill="#fff" font-size="5" font-family="Helvetica">Toilette</text>
+        <text x="25" y="19" fill="#fff" font-size="5" font-family="Helvetica">Wiese</text>
+        <text x="3.2" y="45" fill="#fff" font-size="4" font-family="Helvetica">Bühne1</text>
+        <text x="82" y="45" fill="#fff" font-size="4" font-family="Helvetica">Bühne2</text>
+        <text x="45.5" y="40" fill="#fff" font-size="3" font-family="Helvetica">Cater-</text>
+        <text x="47" y="44" fill="#fff" font-size="3" font-family="Helvetica">ing</text>
+        <text x="12" y="77" fill="#fff" font-size="4" font-family="Helvetica">Camping1</text>
+        <text x="72" y="77" fill="#fff" font-size="4" font-family="Helvetica">Camping2</text>
+
+    </g>
+</svg>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bereich bearbeiten</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<<div class="container mt-4">
+    <h1>Bereich bearbeiten: <span th:text="${bereich.name}"></span></h1>
+
+    <!-- Formular für Buehne und Wiese -->
+    <form method="post" th:action="@{/bereiche/update}"
+          th:if="${bereich.getClass().getSimpleName() == 'Buehne' or bereich.getClass().getSimpleName() == 'Wiese'}">
+        <input type="hidden" name="id" th:value="${bereich.id}"/>
+        <input type="hidden" name="blocked" th:value="${bereich.blocked}"/>
+
+        <div class="mb-3">
+            <label class="form-label">Position X:</label>
+            <input class="form-control" name="positionX" th:value="${bereich.positionX}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Position Y:</label>
+            <input class="form-control" name="positionY" th:value="${bereich.positionY}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Breite:</label>
+            <input class="form-control" name="width" th:value="${bereich.width}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Höhe:</label>
+            <input class="form-control" name="height" th:value="${bereich.height}" type="number"/>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Speichern</button>
+        <a class="btn btn-secondary" th:href="@{/bereiche}">Abbrechen</a>
+    </form>
+
+    <!-- Formular für mietbare Bereiche -->
+    <form method="post" th:action="@{/bereiche/update-rented}"
+          th:if="${bereich.getClass().getSimpleName() == 'Toiletten' or
+                  bereich.getClass().getSimpleName() == 'Camping' or
+                  bereich.getClass().getSimpleName() == 'Catering' or
+                  bereich.getClass().getSimpleName() == 'ErsteHilfeZelt'}">
+        <input type="hidden" name="id" th:value="${bereich.id}"/>
+        <input type="hidden" name="blocked" th:value="${bereich.blocked}"/>
+        <input type="hidden" name="rented" th:value="${bereich.rented}"/>
+
+        <div class="mb-3">
+            <label class="form-label">Position X:</label>
+            <input class="form-control" name="positionX" th:value="${bereich.positionX}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Position Y:</label>
+            <input class="form-control" name="positionY" th:value="${bereich.positionY}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Breite:</label>
+            <input class="form-control" name="width" th:value="${bereich.width}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Höhe:</label>
+            <input class="form-control" name="height" th:value="${bereich.height}" type="number"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Mietpreis (€):</label>
+            <input class="form-control" name="price" step="0.01" th:value="${bereich.price}" type="number"/>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Speichern</button>
+        <a class="btn btn-secondary" th:href="@{/bereiche}">Abbrechen</a>
+    </form>
+</div>

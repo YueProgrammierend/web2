@@ -1,0 +1,82 @@
+= Protokoll Gruppe 21
+
+Treffen am 10.11.2025
+
+Ort:      APB/E009 +
+Beginn:   10:00 Uhr +
+Ende:     11:00 Uhr
+
+__Schriftführer:Laran Wolf__
+
+*Nächstes Treffen:* +
+17.11.2025, 10:00 Uhr, APB/E009
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass 
+- Laran Wolf (Protokollant)
+- Alexandra Reinhold
+- Haakon Frank
+- Yue Wu
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+Pflichtenheft Meilenstein ist ganz in Ordung ausgefallen, nächste Woche ist der nächste Meilenstein
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub*
+// Wie ist der Status der im letzten Sprint erstellten Issues/veteilten Aufgaben?
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Aufgabe |Status |Bemerkung
+|#8 Festival Erstellung |Ein authentifizierter Nutzer (Planer, Manager) soll ein Festival erstellen und diesem einen Termin und eine Location zuordnen können. |in progress |Haakon hat angefangen zu implementiere, dass jedem festival eine Location hinzugefügt wird.
+|#10 Künstlerliste |Das System soll eine Liste mit den Kontaktdaten und Preisen der angeheuerten Künstler darstellen und speichern können. |in review |Alex hat es fertig implementiert.
+|#11 Kartenansicht |Nachdem der Planer die Ticketpreise festgelegt hat, soll eine von ihm festgelegte Menge an Tickets erstellt werden. Einem authentifizierten Nutzer mit den ausreichenden Berechtigungen soll es möglich sein, eine tabellarische Übersicht der Karten einzusehen. |in review |Vanessa hat es implementiert.
+|#12 Festival anzeigen | | in progress |Yue hat es angefangen zu implementieren.
+| #13 Termin festlegen | | in progress |Yue hat es angefangen zu implementieren.
+|#14 Bereiche erstellen | Es soll möglich sein, die verschiedenen Bereiche mit ihren Attributen und Methoden zu haben. | in review | Laran hat es implementiert. Die Erstellung eines neuen Bereiches muss noch im Front-End passieren.
+|#15 weiteres Personal einstellen Übersicht |Es sollen die weiteren Personalmitarbeiter in einer Übersicht angezeigt werden. Diese sollen einstellbar sein. | in review | Alex hat es implementiert. Nach Rücksprache mit dem Tutor soll es noch sichtbar sein, auf welchem Festival die Personen eingestellt sind.
+|#16 Lager | Das System soll eine Ansicht für den Lagerbestand bereitstellen. Authentifizierte Nutzer mit den ausreichenden Berechtigungen können den Lagerbestand einsehen.| in progress | Zoe hat es implementiert eine Lageransicht ist schon vorhanden und die Bestückung anpassbar.
+|#17 Location erstellen | Es soll möglich sein Festivals eine Location zuzuordnen | in progress | Haakon hat angefangen es zu implementieren.
+|#18 Kartenpreis festlegen | Der Preis der Karten kann verändert werden | in progress | Vanessa hat es implementiert. Nach Rücksprache mit dem Tutor ist es zu kompliziert und muss vereinfacht werden.
+|===
+
+
+== Aktueller Stand
+- Unterteilung der Aufgaben: 
+
+Alex: Personal und Künstler in Liste darstellbar,
+
+Vanessa: Liste an Tickets mit jeweiligen Preis änderbar,
+
+Zoe: Lageransicht,
+
+Yue: Festival erstellen und Termin zuweisen,
+ 
+Haakon: Festivalklasse mit Location gemacht -> funktioniert noch nicht. Wird nächste Woche mit Yues teil verbunden,
+
+Laran: Bereichsplanung mit den Verschiedenene Komponenten.
+
+
+- Klasssendiagramme: Zoe und Vanessa haben grobe Strucktur ohne Verbindung , Alex hat Probleme mit Astah aber hat das Diagramm fertig. Laran hat ein Diagramm angefangen
+
+- Die Klassendiagramme und Analyseklassendiagramme sollen nächste Woche zur bisherigen Implemenetierung stehen
+
+- noch keine Tests geschrieben, sollen aber bis nächste Woche vorhanden sein
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Titel |Beschreibung |Verantwortlicher |Status
+|#19 |Karten Ausdrucken | Tickets können ausgedruckt werden und ausgedruckte Tickets werden vom Bestand abgezogen. | Vanessa | ready
+|#20|Karten auf Gültigkeit prüfen |Überprüfung ob ein Ticket bereits valide ist und ob es bereits gescannt wurde | Vanessa | ready
+|#22 | Zeitmanagement der Künstler auf deren Bühnen | Es muss möglich sein, Künstler für bestimmte Zeitslots auf einzelne Bühnen zuzuteilen | Alexandra | ready
+|#23 |Plan des Geländes erstellen | Es soll möglich sein den gesamtplan, des Geländes zu bearbeiten und die einzelnen Gegenstände darauf zu verorten. | Laran | ready 
+|===

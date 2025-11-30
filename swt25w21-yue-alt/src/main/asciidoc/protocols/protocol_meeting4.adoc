@@ -1,0 +1,66 @@
+= Protokoll Gruppe 21
+
+Treffen am 03.11.2025
+
+Ort:      Ort des Treffens +
+Beginn:   10:00 Uhr +
+Ende:     11:07 Uhr
+
+__Schriftführer:__Alexandra
+
+*Nächstes Treffen:* +
+10.11.2025, 10:00 Uhr, APB/009
+
+__Teilnehmer:__
+- Vanessa Sehring (Scrum Master)
+- Zoe Maass
+- Laran Wolf (Online)
+- Alexandra Reinhold
+- Haakon Frank (Online)
+- Yue Wu
+- Adrian Scholze (Tutor)
+
+== Bemerkungen
+- Anmeldung auf selma nicht vergessen! 
+- Präsentation der Videoshop-Funktionalität 
+- Yue sollte sich eher für Aufgaben melden 
+- bbb link ist permanent!
+- Komponenten überdenken (modularer, keine stark austauschbaren Komponenten)
+- Gäste-Terminal muss in den Diagrammen einheitlich gestaltet werden.
+- Bühnenbelegung anders einbringen
+- Rechtschreibung überarbeiten (siehe Fehler aus dem aktuellen Dokument von Adrian)
+- Unauthenticated User (Gast) nicht ganz als Komponente
+- Manager und Festivalleiter trennen
+- Login aufteilen im Use-Case-Diagramm
+- Pfeile im Use-Case-Diagramm sind unübersichtlich
+- CRUD muss bei Funktionalen Anforderungen hinzugefügt werden!
+- Ticketverkaufsstart und Ende der Planung muss klarer herauskommen
+- Konto rausnehmen aus dem Sequenzdiagramm der Ticketkontrolle
+- Bereich umbennnen bei Sequenzdiagramm zu Bereichsplanung
+- 14. 11. ist Meilenstein Basisfunktionalitäten
+
+
+== Aktueller Stand
+- Pflichtenheft Aufgabenverteilung mitgeteilt
+- documentation branch wurde gemerged
+- Meilenstein bestanden c:
+
+
+
+== Aufgaben für nächste Woche
+- Product Backlog weiter ausarbeiten
+- Beschreibung ändern bei 3. im Pflichtenheft (eigene Worte)
+- Klammern (wie bei 4.) im Pflichtenheft entfernen
+- genaue Version des Browsers festlegen
+- Priorität überdenken
+- bei der Top-Level-Architektur Lager einsehen nach Catering, da Catering das Bestandslager hat?
+- Use-Case-Diagramm anpassen
+- jedes Pair ein bis zwei Features
+- Die grundlegenden Entitäten müssen anlegbar sein.
+- Funktionale Anforderungen und Klassendiagramm des Features hinzufügen
+- Akzeptanztest schreiben
+- GUI weniger wichtig
+- Issues nutzen mit Projects
+
+
+

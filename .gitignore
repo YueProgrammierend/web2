@@ -1,0 +1,61 @@
+db/
+target/
+.settings/
+.project
+.classpath
+
+# /.git
+# /.gitignore
+# /.github
+# 这个提交不了子文件
+swt25w21/
+swt25w21-yue-login/
+swt25w21-dokumentation/
+videoshop/
+
+
+
+# VS Code
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Eclipse
+bin/
+.settings/
+.project
+.classpath
+.factorypath
+
+
+
+# Eclipse STS plugin
+.springBeans
+
+# Un-ignore maven wrapper jar
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Java and Maven
+*.class
+*.jar
+target/
+
+
+# IntelliJ
+out/
+.idea/
+*.iml
+
+# MagicDraw
+*.mdzip.bak
+
+# H2 database files
+*.mv.db
+*.h2.db
+
+# Misc
+hs_err_*.log
+~$*

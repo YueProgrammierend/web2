@@ -13,4 +13,5 @@ target/
 
 /.git
 /.gitignore
+/.github
 # 这个其实没用，提交不了子文件

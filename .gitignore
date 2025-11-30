@@ -10,4 +10,7 @@ target/
 *.mdzip.bak
 .DS_Store
 
-/.git
+videoshop/.git
+swt25w21/.git
+swt25w21-yue-login/.git
+swt25w21-dokumentation/.git

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+
+<main layout:fragment="content" class="container p-4">
+
+    <!-- IF NO STAGE SELECTED -->
+    <div th:if="${not (selected ?: false)}">
+        <h1>Bühnen Übersicht</h1>
+
+        <ul class="list-group mt-3">
+            <li class="list-group-item"
+                th:each="s : ${stages}">
+                <a th:href="@{'/stages/' + ${s.id}}"
+                   th:text="${s.name}"></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- IF STAGE SELECTED -->
+    <div th:if="${selected}">
+        <a href="/stages" class="btn btn-secondary mb-3">← Zurück</a>
+
+        <h1>
+            Bühne: <span th:text="${buehne.name}"></span>
+        </h1>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4>Informationen</h4>
+                <p><strong>Name:</strong> <span th:text="${buehne.name}"></span></p>
+            </div>
+        </div>
+
+        <h3>Bisherige Slots</h3>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Künstler</th>
+                <th>Start</th>
+                <th>Ende</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="slot : ${slots}">
+                <td th:text="${slot.kuenstler.name}"></td>
+                <td th:text="${slot.startTime}"></td>
+                <td th:text="${slot.endTime}"></td>
+                <td>
+                    <form th:action="@{/stages/{stageId}/slot/{slotId}/remove(stageId=${buehne.id}, slotId=${slot.id})}"
+                          method="post">
+                        <button type="submit" class="btn btn-danger btn-sm">Löschen</button>
+                    </form>
+                </td>
+            </tr>
+
+            <tr th:unless="${slots}">
+            <td colspan="3" class="text-center text-muted">
+                    No artist assigned yet.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr class="my-4">
+
+        <h3>Künstler zur Bühne hinzufügen</h3>
+
+        <form th:action="@{'/stages/' + ${buehne.id} + '/assign'}"
+              th:object="${slotForm}"
+              method="post">
+
+            <!-- Global errors -->
+            <div th:if="${#fields.hasGlobalErrors()}" class="alert alert-danger">
+                <ul>
+                    <li th:each="err : ${#fields.globalErrors()}" th:text="${err}"></li>
+                </ul>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Künstler</label>
+                <select class="form-select" th:field="*{kuenstlerId}">
+                    <option value="" disabled>alle</option>
+                    <option th:each="k : ${kuenstler}"
+                            th:value="${k.id}"
+                            th:text="${k.name}">
+                    </option>
+                </select>
+                <div class="text-danger" th:if="${#fields.hasErrors('kuenstlerId')}"
+                     th:errors="*{kuenstlerId}"></div>
+            </div>
+
+            <div class="mb-3">
+                <label>Startzeit</label>
+                <input type="datetime-local" th:field="*{start}"
+                       th:value="${#temporals.format(start, 'yyyy-MM-dd''T''HH:mm')}">
+                <div class="invalid-feedback d-block" th:errors="*{start}"></div>
+            </div>
+
+            <div class="mb-3">
+                <label>Endzeit</label>
+                <input type="datetime-local" th:field="*{end}"
+                       th:value="${#temporals.format(end, 'yyyy-MM-dd''T''HH:mm')}">
+                <div class="invalid-feedback d-block" th:errors="*{end}"></div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Speichern</button>
+        </form>
+
+    </div>
+
+</main>
+
+</html>

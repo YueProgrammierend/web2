@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout.html}">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" th:href="@{/resources/css/style.css}">
+		<title th:text="#{welcome.title}">Welcome!</title>
+	</head>
+	<body>
+        <nav th:insert="~{navigation :: navigation}"></nav>
+		<h1 th:text="#{welcome.title}">Welcome!</h1>
+		<p th:text="#{welcome.text}"></p>
+	</body>
+</html>

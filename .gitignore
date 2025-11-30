@@ -10,7 +10,4 @@ target/
 *.mdzip.bak
 .DS_Store
 
-videoshop/.git
-
-swt25w21/.git
-swt25w21-yue/.git
+/.git

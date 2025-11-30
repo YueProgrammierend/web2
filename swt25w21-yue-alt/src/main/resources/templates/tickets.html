@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    <title th:text="#{tickets.title}">Tickets</title>
+</head>
+    <body>
+        <nav>
+            <a th:href="@{/}">Home</a>
+        </nav>
+
+        <div th:if="${#lists.isEmpty(tickets)}">
+            <p th:text="#{tickets.ticketless}">So no Tickets?</p>
+        </div>
+
+        <div th:if="${!#lists.isEmpty(tickets)}" class="ui link cards">
+            <div class="ui card">
+                <table class="ui celled table">
+                    <thead>
+                    <tr>
+                        <th th:text="#{tickets.festival}">Festival</th>
+                        <th th:text="#{tickets.category}">Category</th>
+                        <th th:text="#{tickets.price}">Price</th>
+                        <th th:text="#{tickets.stock}">Stock</th>
+                        <th th:text="#{tickets.actions}">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="ticket : ${tickets}">
+                        <td th:text="${festivalNames[ticket.id.toString()]}"></td>
+                        <td th:text="${ticket.displayCategories}"></td>
+                        <td>
+                            <div th:if="${!(editTicketId != null and ticket.id.toString() == editTicketId and editField == 'price')}">
+                                <span th:text="${ticket.price}"></span>
+                                <form method="get" th:action="@{/tickets}">
+                                    <input type="hidden" name="editTicketId" th:value="${ticket.id}" />
+                                    <input type="hidden" name="editField" value="price" />
+                                    <button th:text="#{tickets.edit}" type="submit">Edit</button>
+                                </form>
+                            </div>
+                            <div th:if="${editTicketId != null and ticket.id.toString() == editTicketId and editField == 'price'}">
+                                <form th:action="@{/tickets/{category}/price(category=${ticket.categories.iterator().next()})}" method="post">
+                                    <input type="number" name="price" th:value="${ticket.price.number}" min="1" required />
+                                    <button th:text="#{tickets.save}" type="submit">Save</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td>
+                            <div th:if="${!(editTicketId != null and ticket.id.toString() == editTicketId and editField == 'stock')}">
+                                <span th:text="${stockMap[ticket.id.toString()]}"></span>
+                                <form method="get" th:action="@{/tickets}">
+                                    <input type="hidden" name="editTicketId" th:value="${ticket.id}" />
+                                    <input type="hidden" name="editField" value="stock" />
+                                    <button th:text="#{tickets.edit}" type="submit">Edit</button>
+                                </form>
+                            </div>
+                            <div th:if="${editTicketId != null and ticket.id.toString() == editTicketId and editField == 'stock'}">
+                                <form th:action="@{/tickets/{category}/stock(category=${ticket.categories.iterator().next()})}" method="post">
+                                    <input type="number" name="stock" th:value="${stockMap[ticket.id.toString()]}" min="0" required />
+                                    <button th:text="#{tickets.save}" type="submit">Save</button>
+                                </form>
+                            </div>
+                        </td>
+                        <td>
+                            <form th:action="@{/tickets/{ticketId}/print(ticketId=${ticket.id})}" method="post">
+                                <button th:text="#{tickets.print}" type="submit">Print</button>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

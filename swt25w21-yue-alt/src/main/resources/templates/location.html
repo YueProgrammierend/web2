@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <title th:text="${title}">Locations</title>
+</head>
+<nav th:insert="~{navigation :: navigation}"></nav>
+<table>
+    <thead style="border-collapse: collapse;">
+        <tr>
+            <th style="padding-right: 32px;">Name</th>
+            <th style="padding-right: 32px;">Adresse</th>
+            <th style="padding-right: 32px;">Kapazität</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="location:${locations}">
+            <!--Location Name-->
+            <td style="padding-right: 16px;" th:text="${location.name}"></td>
+            <!--Adresse-->
+            <td style="padding-right: 16px;" th:text="${location.address}"></td>
+            <!--Kapazität-->
+            <td style="padding-right: 16px;" th:text="${location.capacity}"></td>
+            <!--
+            <td>
+                <form th:action="@{/festival/delete/{id}(id=${festival.id.id})}" method="post">
+                    <button type="submit">löschen</button>
+                </form>
+            </td>
+            -->
+        </tr>
+    </tbody>
+</table>
+</main>
+</body>
+</html>

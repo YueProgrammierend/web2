@@ -42,6 +42,20 @@ public class Disc extends Product {
 	private String genre, image;
 	private DiscType type;
 
+    //todo: rust
+    //#[derive(Debug)]
+    //enum DiscType {
+    //    Bluray,
+    //    Dvd,
+    //}
+    //
+    //#[derive(Debug)]
+    //struct Disc {
+    //    genre: String,
+    //    image: String,
+    //    disc_type: DiscType,
+    //}
+
 	// (｡◕‿◕｡)
 	// Jede Disc besitzt mehrere Kommentare, eine "1 zu n"-Beziehung -> @OneToMany für JPA
 	// cascade gibt an, was mit den Kindelementen (Comment) passieren soll wenn das Parentelement

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/guestbook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/guestbook-sample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/swt25w21" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/swt25w21-yue" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/videoshop" vcs="Git" />
+  </component>
+</project>
